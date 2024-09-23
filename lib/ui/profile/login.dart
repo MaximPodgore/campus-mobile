@@ -78,7 +78,7 @@ class _LoginState extends State<Login> {
             // primary: Theme.of(context).buttonColor,
             foregroundColor: Theme.of(context).backgroundColor,
           ),
-          child: Text('Log out, test'),
+          child: Text('Log out'),
           onPressed: () => executeLogout(),
         ),
       ),
