@@ -71,13 +71,17 @@ class _LoginState extends State<Login> {
             : "",
         style: TextStyle(fontSize: 17),
       ),
-      trailing:  OutlinedButton(
+      trailing: Semantics(
+        label: 'Log out',
+        child: OutlinedButton(
           style: OutlinedButton.styleFrom(
+            // primary: Theme.of(context).buttonColor,
             foregroundColor: Theme.of(context).backgroundColor,
           ),
-          child: Text('Log out'),
+          child: Text('Log out, test'),
           onPressed: () => executeLogout(),
         ),
+      ),
     );
   }
 
