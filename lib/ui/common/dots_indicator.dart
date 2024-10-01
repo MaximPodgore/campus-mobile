@@ -43,17 +43,18 @@ class DotsIndicator extends AnimatedWidget {
       ),
     );
     double zoom = 1.0 + (_kMaxZoom - 1.0) * selectedness;
-    bool isSelected = (controller.page?.round() ?? controller.initialPage) == index;
+    bool isSelected = (controller.page?.round() ?? controller.initialPage) ==
+        index;
 
     return Container(
       width: _kDotSpacing,
       child: Center(
-        child: Semantics(
-          label: 'Page ${index + 1} of $itemCount',
-          selected: isSelected,
-          child: Material(
-            color: color,
-            type: MaterialType.circle,
+        child: Material(
+          color: color,
+          type: MaterialType.circle,
+          child: Semantics(
+            label: 'Page ${index + 1} of $itemCount',
+            selected: isSelected,
             child: Container(
               width: _kDotSize * zoom,
               height: _kDotSize * zoom,
